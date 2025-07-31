@@ -1,0 +1,30 @@
+[PROJECT]
+Target=mot.hex
+Processor_Text=PIC16F887
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=mot.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[mot.c]
+Type=4
+[mru-list]
+1=mot.c
+[Opened Files]
+1=clip1.c
+2=clip2.c
+3=clip4.c
+4=clip5.c
+5=clip6.c
+6=clip7.c
+7=clip8.c
+8=clip9.c
+9=clip10.c
+10=clip 11.c
+11=clip3.c
+12=mot.c
+13=
+[Units]
+Count=1
+1=mot (main)

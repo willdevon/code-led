@@ -1,0 +1,120 @@
+#include <16f887.h>
+#fuses intrc_io
+#use delay (clock=8Mhz)
+#define up pin_e0
+#define down pin_e1
+unsigned int8 n, led;
+signed int8 dem=1;
+
+void nutnhan()
+    {
+       if (input(up)==0)
+         {
+          delay_ms(2);
+           if (input(up)==0)
+             {
+               dem++;
+               if (dem>6) dem=1;
+             }
+         }
+         
+         if (input(down)==0)
+         {
+           delay_ms(2);
+           if (input(down)==0)
+           {
+             dem--;
+             if (dem<1) dem=6;
+           }
+         }
+    }
+    
+    
+    
+void dichphai()
+    {
+       for (n=0; n<8; n++)
+       {
+          led=0x80>>n;
+          output_c(led);
+          delay_ms(200);
+          nutnhan();
+       }
+    }
+    
+void dichtrai()
+    { 
+      for (n=0; n<8; n++)
+      {
+        led=0x01<<n;
+        output_c(led);
+        delay_ms(200);
+        nutnhan();
+      }
+    }
+
+void dich2phai()
+    {
+       for (n=0; n<8; n++)
+       {
+          led=0xC0>>n;
+          output_c(led);
+          delay_ms(200);
+          nutnhan();
+       }
+    }
+    
+void dich2trai()
+    { 
+      for (n=0; n<8; n++)
+      {
+        led=0x03<<n;
+        output_c(led);
+        delay_ms(200);
+        nutnhan();
+      }
+    }
+
+void sangdanphai()
+   {
+      for (n=0; n<8; n++)
+         {
+           led=0xff>>n;
+           output_c(led);
+           delay_ms(200);
+           nutnhan();
+         }
+   }
+   
+void sangdantrai()
+   {
+      for (n=0; n<8; n++)
+         {
+           led=~0xff<<n;
+           output_c(led);
+           delay_ms(200);
+           nutnhan();
+         }
+   }
+
+
+void main ()
+    {
+       set_tris_c(0);
+       set_tris_e(0xff);
+       output_c(0);
+       delay_ms(200);
+       output_c(0xff);
+       delay_ms(200);
+       
+       
+       while (true)
+       {
+         if (dem==1) dichphai();
+         if (dem==2) dichtrai();
+         if (dem==3) dich2phai();
+         if (dem==4) dich2trai();
+         if (dem==5) sangdanphai();
+         if (dem==6) sangdantrai();
+       }
+    }

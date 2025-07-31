@@ -1,0 +1,68 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     n
+021     led
+022     dem
+023     @TRIS_C
+024     @delay_ms1.P1
+024     nutnhan.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000018  nutnhan
+000045  dichphai
+000064  dichtrai
+000083  dich2phai
+0000A2  dich2trai
+0000C1  sangdanphai
+0000E0  sangdantrai
+0000FE  MAIN
+0000FE  @cinit1
+000119  @cinit2
+
+Project Directory:
+    D:\VXL_code\
+
+Project Files:
+    mot.c                                                   [30-Jul-25 22:14  CRC=574E5309]
+    C:\Program Files (x86)\PICC\Devices\16f887.h            [12-Nov-13 14:35  CRC=6CB1A611]
+
+Source signature=30B19F2B
+
+Units:
+    mot (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   mot.xsym
+    Errors:      mot.err
+    Ext Symbols: mot.esym
+    INHX8:       mot.hex
+    Symbols:     mot.sym
+    List:        mot.lst
+    Debug/COFF:  mot.cof
+    Project:     mot.ccspjt
+    Call Tree:   mot.tre
+    Statistics:  mot.STA
