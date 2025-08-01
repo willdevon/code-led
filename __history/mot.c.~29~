@@ -39,7 +39,7 @@ void nutnhan()
     }
     
     
-void tvm7d(unsigned int8 dem) // xuat tin hieu ra led 7 doan va xoa so 0 vo nghia 
+void tvm7d(unsigned int8 dem)
     {
        don_vi = output_b(m7d[dem%10]);
        chuc   = output_d(m7d[dem/10%10]);
@@ -125,12 +125,12 @@ void tatdantrai()
 
 void main ()
     {
-       set_tris_c(0);  
+       set_tris_c(0);
        set_tris_b(0);
        set_tris_d(0);
        set_tris_e(0xff);
        
-       output_c(0);    // khi mo nguon thi se chp tat 200ms de bao hieu mach hoat dong 
+       output_c(0);
        delay_ms(200);
        output_c(0xff);
        delay_ms(200);

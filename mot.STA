@@ -37,14 +37,14 @@ Page ROM  %  RAM   Vol Diff  Functions:
 Program metrics:
     Functions               10
     Statements              91
-    Comments                130
+    Comments                132
     Volume (V)              4359
     Difficulty (D)          37.5
     Effort to implement (E) 163578
     Time to implement (T)   2 hours, 31 minutes
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   26
-    Maintainability (MI)    71
+    Maintainability (MI)    73
 
  Segment     Used  Free
 -----------  ----  ----

@@ -1,4 +1,4 @@
-CCS PCM C Compiler, Version 5.015, 5967               01-Aug-25 21:46
+CCS PCM C Compiler, Version 5.015, 5967               01-Aug-25 21:55
 
                Filename:   D:\VXL_code\code led\mot.lst
 
@@ -188,7 +188,7 @@ CCS PCM C Compiler, Version 5.015, 5967               01-Aug-25 21:46
 ....................     } 
 ....................      
 ....................      
-.................... void tvm7d(unsigned int8 dem) 
+.................... void tvm7d(unsigned int8 dem) // xuat tin hieu ra led 7 doan va xoa so 0 vo nghia  
 ....................     { 
 ....................        don_vi = output_b(m7d[dem%10]); 
 *
@@ -546,7 +546,7 @@ CCS PCM C Compiler, Version 5.015, 5967               01-Aug-25 21:46
 0184:  CLRF   09
 0185:  BCF    03.7
 ....................     { 
-....................        set_tris_c(0); 
+....................        set_tris_c(0);   
 0186:  MOVLW  00
 0187:  BSF    03.5
 0188:  BCF    03.6
@@ -564,7 +564,7 @@ CCS PCM C Compiler, Version 5.015, 5967               01-Aug-25 21:46
 0191:  BSF    09.2
 0192:  BSF    09.3
 ....................         
-....................        output_c(0); 
+....................        output_c(0);    // khi mo nguon thi se chp tat 200ms de bao hieu mach hoat dong  
 0193:  BCF    03.5
 0194:  MOVWF  25
 0195:  BSF    03.5

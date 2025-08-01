@@ -1,7 +1,8 @@
-D G "__PCM__" 0 151 ""5.015""
-D G "__DEVICE__" 0 151 "887"
-D G "__DATE__" 0 151 ""01-Aug-25""
-D G "__TIME__" 0 151 ""21:46:26"" "Standard Header file for the PIC16F887 device ////////////////"
+D G "down" 0 5 "pin_e1"
+D G "__PCM__" 0 152 ""5.015""
+D G "__DEVICE__" 0 152 "887"
+D G "__DATE__" 0 152 ""01-Aug-25""
+D G "__TIME__" 0 152 ""21:55:02"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 v L "value" 1 39 "int8" `54 
 f B "set_tris_a" 1 39 "void(int8 value)" `53 
@@ -860,7 +861,7 @@ V G "chuc" 0 9 "int8" `627
 V L "dem" 0 11 "int8" `629 
 f G "tvm7d" 0 11 "void(int8 dem)" `628 
 F G "nutnhan" 0 13 "void()" `630 
-V L "dem" 0 42 "int8" `632 
+V L "dem" 0 42 "int8" `629  "xuat tin hieu ra led 7 doan va xoa so 0 vo nghia"
 F G "tvm7d" 0 43 "void(int8 dem)" `628 
 F G "dichphai" 0 60 "void()" `634 
 F G "dichtrai" 0 71 "void()" `636 
@@ -869,6 +870,7 @@ F G "dich2trai" 0 93 "void()" `638
 F G "tatdanphai" 0 104 "void()" `639 
 F G "tatdantrai" 0 115 "void()" `640 
 F G "MAIN" 0 127 "void()" `641 
+C L "MAIN" 0 133 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0
