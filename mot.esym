@@ -1,8 +1,7 @@
-D G "down" 0 5 "pin_e1"
-D G "__PCM__" 0 122 ""5.015""
-D G "__DEVICE__" 0 122 "887"
-D G "__DATE__" 0 122 ""30-Jul-25""
-D G "__TIME__" 0 122 ""22:14:08"" "Standard Header file for the PIC16F887 device ////////////////"
+D G "__PCM__" 0 151 ""5.015""
+D G "__DEVICE__" 0 151 "887"
+D G "__DATE__" 0 151 ""01-Aug-25""
+D G "__TIME__" 0 151 ""21:46:26"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 v L "value" 1 39 "int8" `54 
 f B "set_tris_a" 1 39 "void(int8 value)" `53 
@@ -855,14 +854,21 @@ D G "down" 0 5 "pin_e1"
 V G "n" 0 6 "int8" `620 
 V G "led" 0 6 "int8" `621 
 V G "dem" 0 7 "sint8" `622 
-F G "nutnhan" 0 10 "void()" `623 
-F G "dichphai" 0 35 "void()" `624 
-F G "dichtrai" 0 46 "void()" `626 
-F G "dich2phai" 0 57 "void()" `627 
-F G "dich2trai" 0 68 "void()" `628 
-F G "sangdanphai" 0 79 "void()" `629 
-F G "sangdantrai" 0 90 "void()" `630 
-F G "MAIN" 0 102 "void()" `631 
+V G "m7d" 0 8 "[10]" `623 
+V G "don_vi" 0 9 "int8" `626 
+V G "chuc" 0 9 "int8" `627 
+V L "dem" 0 11 "int8" `629 
+f G "tvm7d" 0 11 "void(int8 dem)" `628 
+F G "nutnhan" 0 13 "void()" `630 
+V L "dem" 0 42 "int8" `632 
+F G "tvm7d" 0 43 "void(int8 dem)" `628 
+F G "dichphai" 0 60 "void()" `634 
+F G "dichtrai" 0 71 "void()" `636 
+F G "dich2phai" 0 82 "void()" `637 
+F G "dich2trai" 0 93 "void()" `638 
+F G "tatdanphai" 0 104 "void()" `639 
+F G "tatdantrai" 0 115 "void()" `640 
+F G "MAIN" 0 127 "void()" `641 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

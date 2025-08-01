@@ -1,7 +1,7 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
 004-005 @WRITE_PROGRAM_MEMORY8.P2
-015     CCP_1_LOW
 015     CCP_1
+015     CCP_1_LOW
 016     CCP_1_HIGH
 01B     CCP_2
 01B     CCP_2_LOW
@@ -9,9 +9,16 @@
 020     n
 021     led
 022     dem
-023     @TRIS_C
-024     @delay_ms1.P1
-024     nutnhan.@SCRATCH1
+023     don_vi
+024     chuc
+025     @TRIS_C
+026     tvm7d.dem
+026     @delay_ms1.P1
+026     nutnhan.@SCRATCH1
+027     tvm7d.@SCRATCH1
+028     @DIV88.P1
+029     @DIV88.P1
+02A     @DIV88.@SCRATCH1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -23,26 +30,30 @@
 10D-10E @WRITE_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
-000004  @delay_ms1
-000018  nutnhan
-000045  dichphai
-000064  dichtrai
-000083  dich2phai
-0000A2  dich2trai
-0000C1  sangdanphai
-0000E0  sangdantrai
-0000FE  MAIN
-0000FE  @cinit1
-000119  @cinit2
+000004  m7d.call
+000008  m7d.data
+000012  @delay_ms1
+000026  @DIV88
+00003B  tvm7d
+000073  nutnhan
+0000B0  dichphai
+0000CF  dichtrai
+0000EE  dich2phai
+00010D  dich2trai
+00012C  tatdanphai
+00014B  tatdantrai
+00016A  @cinit1
+00016A  MAIN
+000185  @cinit2
 
 Project Directory:
-    D:\VXL_code\
+    D:\VXL_code\code led\
 
 Project Files:
-    mot.c                                                   [30-Jul-25 22:14  CRC=574E5309]
+    mot.c                                                   [01-Aug-25 21:46  CRC=1AF27766]
     C:\Program Files (x86)\PICC\Devices\16f887.h            [12-Nov-13 14:35  CRC=6CB1A611]
 
-Source signature=30B19F2B
+Source signature=F455C388
 
 Units:
     mot (main)

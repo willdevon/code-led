@@ -8,7 +8,7 @@ signed int8 dem=1;
 const unsigned int8 m7d[10]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};
 unsigned char don_vi, chuc;
 
-void tvm7d(dem);
+void tvm7d();
 void nutnhan()
     {
        if (input(up)==0)
@@ -19,7 +19,7 @@ void nutnhan()
                dem++;
                if (dem>6) dem=1;
                 while (input(up)==0);
-                 tvm7d(dem);
+                 tvm7d();
              }
             
              
@@ -33,7 +33,7 @@ void nutnhan()
              dem--;
              if (dem<1) dem=6;
               while (input(down)==0);
-                tvm7d(dem);
+                tvm7d();
            }
          }
     }
@@ -51,8 +51,6 @@ void tvm7d(unsigned int8 dem)
               don_vi=0xff;
            }
          }
-         output_b(don_vi);
-         output_d(chuc);
     }
     
     
@@ -100,7 +98,7 @@ void dich2trai()
       }
     }
 
-void tatdanphai()
+void sangdanphai()
    {
       for (n=0; n<8; n++)
          {
@@ -111,11 +109,11 @@ void tatdanphai()
          }
    }
    
-void tatdantrai()
+void sangdantrai()
    {
       for (n=0; n<8; n++)
          {
-           led=0xff<<n;
+           led=~0xff<<n;
            output_c(led);
            delay_ms(200);
            nutnhan();
@@ -126,15 +124,13 @@ void tatdantrai()
 void main ()
     {
        set_tris_c(0);
-       set_tris_b(0);
-       set_tris_d(0);
        set_tris_e(0xff);
-       
        output_c(0);
-       delay_ms(200);
+       delay_ms(500);
        output_c(0xff);
-       delay_ms(200);
+       delay_ms(500);
        tvm7d(dem);
+       nutnhan();
      
        
        
@@ -144,7 +140,7 @@ void main ()
          if (dem==2) dichtrai();
          if (dem==3) dich2phai();
          if (dem==4) dich2trai();
-         if (dem==5) tatdanphai();
-         if (dem==6) tatdantrai();
+         if (dem==5) sangdanphai();
+         if (dem==6) sangdantrai();
        }
     }

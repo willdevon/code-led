@@ -12,12 +12,12 @@ Type=4
 [mru-list]
 1=mot.c
 [Opened Files]
-1=clip1.c
-2=clip2.c
-3=clip4.c
-4=clip5.c
-5=clip6.c
-6=clip7.c
+1=..\demo.c
+2=..\ontap.c
+3=..\clip6.c
+4=mot.c
+5=..\clip5.c
+6=
 7=clip8.c
 8=clip9.c
 9=clip10.c

@@ -131,9 +131,9 @@ void main ()
        set_tris_e(0xff);
        
        output_c(0);
-       delay_ms(200);
+       delay_ms(1000);
        output_c(0xff);
-       delay_ms(200);
+       delay_ms(1000);
        tvm7d(dem);
      
        
