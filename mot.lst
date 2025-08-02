@@ -1,4 +1,4 @@
-CCS PCM C Compiler, Version 5.015, 5967               01-Aug-25 21:55
+CCS PCM C Compiler, Version 5.015, 5967               02-Aug-25 14:35
 
                Filename:   D:\VXL_code\code led\mot.lst
 
@@ -587,7 +587,7 @@ CCS PCM C Compiler, Version 5.015, 5967               01-Aug-25 21:55
 01A3:  MOVLW  C8
 01A4:  MOVWF  26
 01A5:  CALL   012
-....................        tvm7d(dem); 
+....................        tvm7d(dem);     // truyen tham tri bien dem vao tvm7d 
 01A6:  MOVF   22,W
 01A7:  MOVWF  26
 01A8:  CALL   03B

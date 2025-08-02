@@ -134,7 +134,7 @@ void main ()
        delay_ms(200);
        output_c(0xff);
        delay_ms(200);
-       tvm7d(dem);     // truyen tham tri bien dem vao tvm7d
+       tvm7d(dem);
      
        
        
